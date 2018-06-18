@@ -9,7 +9,16 @@ public class App {
 			if(args[i] == null ) {
 				System.out.println("invalid");
 			} else {
-				int arg = Integer.parseInt(args[i]);
+				try {
+					int arg = Integer.parseInt(args[i]);
+					if(arg <= 1000 && arg > 0) {
+
+					} else {
+						System.out.println("invalid");
+					}
+				} catch (Exception e) {
+					System.out.println("invalid");
+				}
 
 			}
 
