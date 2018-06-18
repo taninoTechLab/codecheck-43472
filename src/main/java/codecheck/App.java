@@ -3,10 +3,11 @@ package codecheck;
 public class App {
 	public static void main(String[] args) {
 
-		boolean str_3 = false;
 		for (int i = 0, l = args.length; i < l; i++) {
-			String output = String.format("argv[%s]: %s", i, args[i]);
-			System.out.println(output);
+			boolean str_3 = false;
+//			String output = String.format("argv[%s]: %s", i, args[i]);
+//			System.out.println(output);
+
 			if (!args[i].matches("^[0-9]+$")) {
 				System.out.println("invalid");
 				continue;
@@ -29,7 +30,6 @@ public class App {
 			} else {
 				System.out.println("invalid");
 			}
-
 		}
 	}
 }
