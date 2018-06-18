@@ -6,20 +6,15 @@ public class App {
 			String output = String.format("argv[%s]: %s", i, args[i]);
 			System.out.println(output);
 
-			if(args[i] == null ) {
-				System.out.println("invalid");
-			} else {
-				try {
-					int arg = Integer.parseInt(args[i]);
-					if(arg <= 1000 && arg > 0) {
-
-					} else {
-						System.out.println("invalid");
-					}
-				} catch (Exception e) {
+			try {
+				int arg = Integer.parseInt(args[i]);
+				if (arg <= 1000 && arg > 0) {
+					System.out.println("smart");
+				} else {
 					System.out.println("invalid");
 				}
-
+			} catch (Exception e) {
+				System.out.println("invalid");
 			}
 
 		}
