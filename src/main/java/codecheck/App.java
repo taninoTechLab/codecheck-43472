@@ -4,18 +4,18 @@ public class App {
 	public static void main(String[] args) {
 
 		boolean str_3 = false;
-		boolean invalid = true;
 		for (int i = 0, l = args.length; i < l; i++) {
 //			String output = String.format("argv[%s]: %s", i, args[i]);
 //			System.out.println(output);
 			if (!args[i].matches("^[0-9]+$")) {
-				invalid = false;
+				System.out.println("invalid");
+				continue;
 			} else if (args[i].contains("3")) {
 				str_3 = true;
 			}
 
 			int arg = Integer.parseInt(args[i]);
-			if (arg <= 1000 && arg > 0 && invalid) {
+			if (arg <= 1000 && arg > 0) {
 				if (arg % 3 == 0 && str_3) {
 					System.out.println("dumb");
 				} else if (arg % 3 == 0) {
